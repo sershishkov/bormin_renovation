@@ -123,10 +123,6 @@ export default function Kafel() {
           }}
         >
           <Image
-            sx={{
-              backgroundSize: 'cover',
-              width: '100%',
-            }}
             src={`/my_images/kafel/${image.src}`}
             alt={image.alt}
             fill

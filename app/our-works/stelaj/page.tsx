@@ -67,10 +67,6 @@ export default function Stelaj() {
           }}
         >
           <Image
-            sx={{
-              backgroundSize: 'cover',
-              width: '100%',
-            }}
             src={`/my_images/stelaj/${image.src}`}
             alt={image.alt}
             fill
