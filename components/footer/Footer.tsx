@@ -21,10 +21,10 @@ export const Footer = () => {
   return (
     <Grid
       container
-      direction='column'
       sx={{
         margin: `0 auto`,
         maxWidth: `1200px`,
+        flexDirection: 'column',
       }}
     >
       <Grid xs={12}>
