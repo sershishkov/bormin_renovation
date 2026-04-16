@@ -27,13 +27,13 @@ export const Footer = () => {
         flexDirection: 'column',
       }}
     >
-      <Grid xs={12}>
+      <Grid size={12}>
         <Typography variant='h6' align='center'>
           Bormin Rénovation, Rue du Clos 8, 1800 VEVEY, Suisse, teL:
           +41765314652, borminart@gmail.com
         </Typography>
       </Grid>
-      <Grid xs={12}>
+      <Grid size={12}>
         <Typography variant='h6' align='center'>
           IBAN: CH 29 0026 6266 1373 3540, VISA Card 5351 4602 1314 4652
         </Typography>
