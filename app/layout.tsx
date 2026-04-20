@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/footer/Footer';
 
@@ -8,6 +9,9 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: `Construction et réparation `,
   description: ` Rénovation d'appartements : Toiture, fenêtres en PVC, pentes, canalisations, carrelage, peinture, plâtrage, installation de toute complexité`,
+  icons: {
+    icon: '/LogoMin.jpg',
+  },
 };
 
 export default function RootLayout({

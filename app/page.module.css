@@ -1,7 +1,8 @@
 .main {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
+  /* border: 1px solid green; */
 }
 
 @media (max-width: 600px) {
