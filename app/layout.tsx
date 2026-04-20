@@ -9,9 +9,6 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: `Construction et réparation `,
   description: ` Rénovation d'appartements : Toiture, fenêtres en PVC, pentes, canalisations, carrelage, peinture, plâtrage, installation de toute complexité`,
-  icons: {
-    icon: '/LogoMin.jpg',
-  },
 };
 
 export default function RootLayout({

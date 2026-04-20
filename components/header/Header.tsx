@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -38,14 +37,20 @@ export const Header = () => {
             }}
           >
             <Grid size={4}>
-              <Link href='/'>
-                <Image
-                  src={`/my_images/Logo_001.jpg`}
-                  alt='Logo Bormin Rénovation'
-                  width={75}
-                  height={75}
-                />
-              </Link>
+              <Typography
+                variant='h6'
+                align='center'
+                sx={{
+                  display: 'inline-block',
+                  color: 'white',
+                  width: '100%',
+                  // border: '2px solid black',
+                }}
+                component={Link}
+                href='/'
+              >
+                Bormin Rénovation
+              </Typography>
               <IconButton
                 size='large'
                 edge='start'
@@ -56,7 +61,7 @@ export const Header = () => {
                 <MenuIcon />
               </IconButton>
             </Grid>
-            <Grid size={4}>
+            <Grid size={4} sx={{ display: { xs: 'none', md: 'block' } }}>
               <Typography variant='h6' align='center'>
                 Rue du Clos 8, 1800 VEVEY, Suisse
               </Typography>
