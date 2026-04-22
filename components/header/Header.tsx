@@ -42,7 +42,7 @@ export const Header = () => {
     return <p>loading</p>;
   }
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position='fixed'>
         <Toolbar>
           <Grid

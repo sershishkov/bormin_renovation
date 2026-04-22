@@ -133,7 +133,7 @@ export default function Kafel() {
         <ArrowBackIcon />
       </IconButton>
       <Typography variant='h4' align='center' sx={{ mb: 4, mt: 2 }}>
-        {`Installation d'un rack`}
+        {`Pose de carrelage`}
       </Typography>
       <ResponsiveNextImageGallery
         galaryImages={galaryImages}
