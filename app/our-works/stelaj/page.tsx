@@ -1,42 +1,46 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-import Image from 'next/image';
-
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from '@mui/material/Link';
 
-const images = [
+import ResponsiveNextImageGallery from '@/components/showPhotos/ResponsiveNextImageGallery';
+
+const galaryImages = [
   {
     src: '001_.jpeg',
-    alt: 'kafel_001_',
+    alt: `installation d'un rack`,
   },
   {
     src: '002_.jpeg',
-    alt: 'kafel_002_',
+    alt: `installation d'un rack`,
   },
   {
     src: '003_.jpeg',
-    alt: 'kafel_003_',
+    alt: `installation d'un rack`,
   },
   {
     src: '004_.jpeg',
-    alt: 'kafel_004_',
+    alt: `installation d'un rack`,
   },
   {
     src: '005_.jpeg',
-    alt: 'kafel_005_',
+    alt: `installation d'un rack`,
   },
   {
     src: '006_.jpeg',
-    alt: 'kafel_006_',
+    alt: `installation d'un rack`,
   },
   {
     src: '007_.jpeg',
-    alt: 'kafel_007_',
+    alt: `installation d'un rack`,
   },
   {
     src: '008_.jpeg',
-    alt: 'kafel_008_',
+    alt: `installation d'un rack`,
   },
 ];
 
@@ -55,26 +59,30 @@ export default function Stelaj() {
   }
 
   return (
-    <Grid container spacing={4} sx={{ margin: `0 auto` }}>
-      {images.map((image, index) => (
-        <Grid
-          key={`${image.src}-${index}`}
-          sx={{
-            margin: `0 auto`,
-            width: `600px`,
-            height: '450px',
-            position: 'relative',
-          }}
-        >
-          <Image
-            src={`/my_images/stelaj/${image.src}`}
-            alt={image.alt}
-            fill
-            loading='eager'
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-          />
-        </Grid>
-      ))}
+    <Grid container sx={{ margin: `0 auto`, flexDirection: 'column' }}>
+      <IconButton
+        size='large'
+        edge='start'
+        color='inherit'
+        aria-label='link to back page'
+        component={Link}
+        href='/'
+        sx={{
+          position: 'fixed',
+          top: 50,
+          left: 16,
+          zIndex: 1000,
+        }}
+      >
+        <ArrowBackIcon />
+      </IconButton>
+      <Typography variant='h4' align='center' sx={{ mb: 4, mt: 2 }}>
+        {`Installation d'un rack`}
+      </Typography>
+      <ResponsiveNextImageGallery
+        galaryImages={galaryImages}
+        imgFolderPath='/my_images/stelaj/'
+      />
     </Grid>
   );
 }

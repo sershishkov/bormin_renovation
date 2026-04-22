@@ -1,11 +1,10 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const Footer = () => {
+export default function Contacts() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -23,8 +22,9 @@ export const Footer = () => {
       container
       sx={{
         margin: `0 auto`,
-        maxWidth: `1200px`,
+        justifyContent: 'flex-start',
         flexDirection: 'column',
+        border: '1px solid #ccc',
       }}
     >
       <Grid size={12}>
@@ -40,4 +40,4 @@ export const Footer = () => {
       </Grid>
     </Grid>
   );
-};
+}

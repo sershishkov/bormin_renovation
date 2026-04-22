@@ -1,98 +1,102 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-import Image from 'next/image';
-
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from '@mui/material/Link';
 
-const images = [
+import ResponsiveNextImageGallery from '@/components/showPhotos/ResponsiveNextImageGallery';
+
+const galaryImages = [
   {
     src: '001_.jpeg',
-    alt: 'kafel_001_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '002_.jpeg',
-    alt: 'kafel_002_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '003_.jpeg',
-    alt: 'kafel_003_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '004_.jpeg',
-    alt: 'kafel_004_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '005_.jpeg',
-    alt: 'kafel_005_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '006_.jpeg',
-    alt: 'kafel_006_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '007_.jpeg',
-    alt: 'kafel_007_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '008_.jpeg',
-    alt: 'kafel_008_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '009_.jpeg',
-    alt: 'kafel_009_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '010_.jpeg',
-    alt: 'kafel_010_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '011_.jpeg',
-    alt: 'kafel_011_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '012_.jpeg',
-    alt: 'kafel_012_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '013_.jpeg',
-    alt: 'kafel_013_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '014_.jpeg',
-    alt: 'kafel_014_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '015_.jpeg',
-    alt: 'kafel_015_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '016_.jpeg',
-    alt: 'kafel_016_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '017_.jpeg',
-    alt: 'kafel_017_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '018_.jpeg',
-    alt: 'kafel_018_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '019_.jpeg',
-    alt: 'kafel_019_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '020_.jpeg',
-    alt: 'kafel_020_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '021_.jpeg',
-    alt: 'kafel_021_',
+    alt: `Pose de carrelage`,
   },
   {
     src: '022_.jpeg',
-    alt: 'kafel_022_',
+    alt: `Pose de carrelage`,
   },
 ];
 
@@ -111,26 +115,30 @@ export default function Kafel() {
   }
 
   return (
-    <Grid container spacing={4} sx={{ margin: `0 auto` }}>
-      {images.map((image, index) => (
-        <Grid
-          key={`${image.src}-${index}`}
-          sx={{
-            margin: `0 auto`,
-            width: `600px`,
-            height: '450px',
-            position: 'relative',
-          }}
-        >
-          <Image
-            src={`/my_images/kafel/${image.src}`}
-            alt={image.alt}
-            fill
-            loading='eager'
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-          />
-        </Grid>
-      ))}
+    <Grid container sx={{ margin: `0 auto`, flexDirection: 'column' }}>
+      <IconButton
+        size='large'
+        edge='start'
+        color='inherit'
+        aria-label='link to back page'
+        component={Link}
+        href='/'
+        sx={{
+          position: 'fixed',
+          top: 50,
+          left: 16,
+          zIndex: 1000,
+        }}
+      >
+        <ArrowBackIcon />
+      </IconButton>
+      <Typography variant='h4' align='center' sx={{ mb: 4, mt: 2 }}>
+        {`Installation d'un rack`}
+      </Typography>
+      <ResponsiveNextImageGallery
+        galaryImages={galaryImages}
+        imgFolderPath='/my_images/kafel/'
+      />
     </Grid>
   );
 }
