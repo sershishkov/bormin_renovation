@@ -7,16 +7,20 @@ import Typography from '@mui/material/Typography';
 
 import ResponsiveNextImageGallery from '@/components/showPhotos/ResponsiveNextImageGallery';
 
-const galaryImages = [
-  // {
-  //   src: 'Vizitka_1.jpg',
-  //   alt: `   `,
-  // },
-  {
-    src: 'Vizitka_2.jpg',
-    alt: ` bormin renovation`,
-  },
-];
+// const galaryImages = [
+//   // {
+//   //   src: 'Vizitka_1.jpg',
+//   //   alt: `   `,
+//   // },
+//   {
+//     src: 'Vizitka_2.jpg',
+//     alt: ` bormin renovation`,
+//   },
+//   {
+//     src: 'vizitka.jpg',
+//     alt: ` bormin renovation`,
+//   },
+// ];
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -35,10 +39,10 @@ export default function Home() {
   return (
     <Grid container spacing={4} sx={{ margin: `0 auto`, maxWidth: `1200px` }}>
       <Grid sx={{ flexGrow: 1 }}>
-        <ResponsiveNextImageGallery
+        {/* <ResponsiveNextImageGallery
           galaryImages={galaryImages}
           imgFolderPath='/my_images/vizitka/'
-        />
+        /> */}
         <Typography variant='h6' align='center'>
           🔨 Artisan polyvalent en Suisse — travail soigné, fiable et dans les
           délais
