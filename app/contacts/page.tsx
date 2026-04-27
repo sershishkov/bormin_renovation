@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from '@mui/material/Link';
 
 export default function Contacts() {
   const [isClient, setIsClient] = useState(false);
@@ -27,6 +30,22 @@ export default function Contacts() {
         border: '1px solid #ccc',
       }}
     >
+      <IconButton
+        size='large'
+        edge='start'
+        color='inherit'
+        aria-label='link to back page'
+        component={Link}
+        href='/'
+        sx={{
+          position: 'fixed',
+          top: 50,
+          left: 16,
+          zIndex: 1000,
+        }}
+      >
+        <ArrowBackIcon />
+      </IconButton>
       <Grid size={12}>
         <Typography variant='body1' align='center'>
           Bormin Rénovation, Rue du Clos 8, 1800 VEVEY, Suisse, teL:

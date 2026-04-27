@@ -4,11 +4,19 @@ import { useState, useEffect } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-// import List from '@mui/material/List';
-// import Link from '@mui/material/Link';
-// import ListItem from '@mui/material/ListItem';
 
-// import { weCanDo } from '@/constants/description_weCanDo';
+import ResponsiveNextImageGallery from '@/components/showPhotos/ResponsiveNextImageGallery';
+
+const galaryImages = [
+  // {
+  //   src: 'Vizitka_1.jpg',
+  //   alt: `   `,
+  // },
+  {
+    src: 'Vizitka_2.jpg',
+    alt: ` bormin renovation`,
+  },
+];
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -27,131 +35,67 @@ export default function Home() {
   return (
     <Grid container spacing={4} sx={{ margin: `0 auto`, maxWidth: `1200px` }}>
       <Grid sx={{ flexGrow: 1 }}>
+        <ResponsiveNextImageGallery
+          galaryImages={galaryImages}
+          imgFolderPath='/my_images/vizitka/'
+        />
         <Typography variant='h6' align='center'>
-          🔧 Homme à tout faire – Intervention rapide !
-        </Typography>
-        <Typography variant='h6' align='center'>
-          Bonjour 👋 Vous recherchez un professionnel sérieux, efficace et
-          expérimenté pour vos travaux ?
-        </Typography>
-        <Typography variant='body1' align='center'>
-          Avec plus de 10 ans d’expérience, je vous propose des prestations de
-          qualité pour votre maison ou appartement.
-        </Typography>
-        <Typography variant='h6' align='center'>
-          🛠️ Mes prestations :
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Montage de meubles (IKEA, dressings, lits, cuisines)
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Travaux intérieurs et extérieurs
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Petits travaux et réparations
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Pose de cloisons et plafonds en placo
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Enduit et préparation des murs
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Installation de douches et baignoires
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Pose et remplacement de robinetterie
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Installation de lavabos et WC
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Pose de carrelage
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Peinture murs et plafonds
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Installation de luminaires, rideaux, étagères
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Pose et remplacement de portes (intérieures et d’entrée)
-        </Typography>
-        <Typography variant='body1' align='center'>
-          • Tous travaux de bricolage et rénovation
-        </Typography>
-        <Typography variant='h6' align='center'>
-          ⭐️ Pourquoi me choisir ?
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Travail propre et soigné
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Intervention rapide
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Ponctualité garantie
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Prix transparents et honnêtes
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Disponible le week-end
-        </Typography>
-        <Typography variant='body1' align='center'>
-          ✔️ Clients satisfaits
-        </Typography>
-        <Typography variant='body1' align='center'>
-          📞 Contactez-moi en message privé — réponse rapide !
+          🔨 Artisan polyvalent en Suisse — travail soigné, fiable et dans les
+          délais
         </Typography>
 
-        <Typography variant='body1' align='center'>
-          Réparation et construction
+        <Typography variant='body1'>
+          Je propose une large gamme de travaux de construction et de
+          rénovation, de toute complexité. Grande expérience, précision et sens
+          des responsabilités dans chaque projet.
         </Typography>
-        <Typography variant='body1' align='center'>
-          Notre entreprise propose des services de réparation et de construction
-          aux entreprises et aux particuliers.
+        <Typography variant='h6'>Mes services :</Typography>
+        <Typography variant='body1'>
+          • Travaux de plomberie (installation, réparation, raccordement)
+        </Typography>
+        <Typography variant='body1'>
+          • Installation et remplacement de fenêtres et de portes
+        </Typography>
+        <Typography variant='body1'>• Réparation de toitures</Typography>
+        <Typography variant='body1'>
+          • Travaux en plaques de plâtre (cloisons, plafonds, habillage)
+        </Typography>
+        <Typography variant='body1'>
+          • Travaux de peinture (peinture, enduits, préparation des surfaces)
+        </Typography>
+        <Typography variant='body1'>
+          • Finitions décoratives (y compris effet « brique »)
+        </Typography>
+        <Typography variant='body1'>
+          • Pose de carrelage (salles de bains, cuisines, etc.)
+        </Typography>
+        <Typography variant='body1'>
+          • Pose de sols (stratifié, parquet)
+        </Typography>
+        <Typography variant='body1'>• Sols autonivelants</Typography>
+        <Typography variant='body1'>• Montage de meubles</Typography>
+        <Typography variant='body1'>
+          • Rénovation intérieure clé en main
+        </Typography>
+        <Typography variant='h6'>En plus :</Typography>
+        <Typography variant='body1'>• Travaux de démolition</Typography>
+        <Typography variant='body1'>
+          • Isolation thermique et travaux d’étanchéité
+        </Typography>
+        <Typography variant='body1'>
+          • Petits travaux et réparations à domicile
+        </Typography>
+        <Typography variant='body1'>
+          Travail propre et soigné, sans coûts inutiles et dans le respect des
+          délais.
+        </Typography>
+        <Typography variant='body1'>
+          Approche individuelle pour chaque client.
+        </Typography>
+        <Typography variant='h5'>
+          📞 Contactez-moi pour une consultation et une estimation.
         </Typography>
       </Grid>
-
-      {/* {weCanDo.map((item) => (
-        <Grid
-          key={item.workName}
-          sx={{
-            alignItems: 'center',
-            flexGrow: 1,
-          }}
-        >
-          <Link href={item.link}>
-            <Typography variant='h6' align='center'>
-              {item.workName}
-            </Typography>
-          </Link>
-          <List>
-            <Grid
-              container
-              sx={{
-                alignItems: 'center',
-                flexGrow: 1,
-              }}
-            >
-              {item.works.map((work) => (
-                <Grid key={work} size={12} sx={{ margin: `0 auto` }}>
-                  <ListItem>
-                    <Typography
-                      variant='body2'
-                      align='center'
-                      sx={{ width: '100%' }}
-                    >
-                      {work}
-                    </Typography>
-                  </ListItem>
-                </Grid>
-              ))}
-            </Grid>
-          </List>
-        </Grid>
-      ))} */}
     </Grid>
   );
 }

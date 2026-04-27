@@ -24,26 +24,26 @@ export default function NavigationList({
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary='Главная' />
+        <ListItemText primary={`Page d'accueil`} />
       </ListItemButton>
 
       <ListItemButton component={Link} href='/our-works/kafel'>
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary='Кафель' />
+        <ListItemText primary='Tuile' />
       </ListItemButton>
       <ListItemButton component={Link} href='/our-works/stelaj'>
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary='Stelaj' />
+        <ListItemText primary='Étagère' />
       </ListItemButton>
       <ListItemButton component={Link} href='/contacts'>
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary='Контакты' />
+        <ListItemText primary='Contacts' />
       </ListItemButton>
     </List>
   );
